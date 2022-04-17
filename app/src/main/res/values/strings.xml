@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">AapkeSath</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Home">Home </string>
+    <string name="History">History</string>
+    <string name="Update">Update</string>
+    <string name="User">User</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="email_optional">Email (Optional)</string>
+    <string name="gender">Gender</string>
+
+    <string name="exit">Do you really want to Exit?</string>
+    <string name="created_by_n_abhishek_vishwakarma_arya_bhavate"><![CDATA[-----created by----- \n Abhishek Vishwakarma & Arya Bhavate]]></string>
+
+</resources>

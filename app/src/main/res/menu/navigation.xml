@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/ic_history_24"
+        android:title="History"/>
+
+    <item
+        android:id="@+id/navigation_work"
+        android:icon="@drawable/work_icon_24"
+        android:title="Work"/>
+
+    <item
+        android:id="@+id/navigation_travel"
+        android:icon="@drawable/travel_icon"
+        android:title="Travel"/>
+    </group>
+
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/login"
+                    android:icon="@drawable/ic_home_24"
+                    android:title="Login"/>
+
+                <item
+                    android:id="@+id/profile"
+                    android:icon="@drawable/ic_person_pin_24"
+                    android:title="Profile"/>
+
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/logout"
+                    android:title="Logout"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

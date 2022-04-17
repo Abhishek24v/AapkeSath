@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mainwork.SelectWork"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/header">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Work"
+                    android:textSize="32dp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="35dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@id/header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/selectWorkLayout">
+
+                    <ImageView
+                        android:id="@+id/shopping"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_shopping"
+                        android:gravity="center"
+                        android:checked="true"
+                        android:contentDescription="shopping"
+                        android:onClick="updateState"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/guide1"
+                        app:layout_constraintBottom_toTopOf="@id/guide2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/medicine"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_medicine"
+                        android:gravity="center"
+                        android:contentDescription="medicine"
+                        android:onClick="updateState"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/guide1"
+                        app:layout_constraintRight_toRightOf="@id/guide3"
+                        app:layout_constraintBottom_toBottomOf="@id/guide2" />
+
+                    <ImageView
+                        android:id="@+id/doctor"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/ic_doctor"
+                        android:gravity="center"
+                        android:contentDescription="doctor"
+                        android:onClick="updateState"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/guide3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/guide2" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/moneyTransfer"
+                        android:src="@drawable/ic_moneytransfer"
+                        android:gravity="center"
+                        android:contentDescription="money_transfer"
+                        android:onClick="updateState"
+                        app:layout_constraintTop_toTopOf="@id/guide2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="@id/guide1"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/shopVeg"
+                        android:src="@drawable/ic_vegshop"
+                        android:gravity="center"
+                        android:onClick="updateState"
+                        android:contentDescription="shop_veg"
+                        app:layout_constraintTop_toTopOf="@id/guide2"
+                        app:layout_constraintLeft_toLeftOf="@id/guide1"
+                        app:layout_constraintRight_toRightOf="@id/guide3"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/other"
+                        android:contentDescription="other"
+                        android:src="@drawable/ic_other"
+                        android:gravity="center"
+                        android:onClick="updateState"
+                        app:layout_constraintTop_toTopOf="@id/guide2"
+                        app:layout_constraintLeft_toLeftOf="@id/guide3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/selectedRedCircle"
+                        android:src="@drawable/ic_selected"
+                        android:visibility="gone"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/guide1"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.33"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/guide2"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/guide3"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.66"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/box_shape"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:layout_marginVertical="14dp"
+                    android:hint="Describe your work here."
+                    android:inputType="textMultiLine"
+                    android:padding="14dp"
+                    android:textSize="15sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginVertical="8dp"
+                    android:id="@+id/uploadFile"
+                    app:layout_constraintTop_toBottomOf="@+id/description">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chooseFileText"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:text="Choose file (optional)"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/fileStatus"
+                        app:layout_constraintTop_toBottomOf="@id/chooseFileText"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/uploadButton"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginRight="12dp"
+                        android:paddingHorizontal="12dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="3dp"
+                        android:background="@drawable/box_shape"
+                        android:text="Status : no file is chosen"/>
+
+                    <ImageView
+                        android:id="@+id/uploadButton"
+                        android:layout_width="33dp"
+                        android:layout_height="36dp"
+                        android:scaleType="centerInside"
+                        android:rotation="180"
+                        app:layout_constraintTop_toBottomOf="@id/chooseFileText"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/ic_uploadfile"
+                        android:layout_marginVertical="8dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/pickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pick Up"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pickup"
+                        android:layout_marginTop="7dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pickupDestination"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter the pickup address"
+                            android:padding="15dp"
+                            android:background="@drawable/box_shape"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/destinationLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Destination"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/destination"
+                        android:layout_marginTop="7dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/destinationText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Destination"
+                            android:padding="15dp"
+                            android:background="@drawable/box_shape"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:inputType="text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectDate"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Date"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/dateButton"
+                        android:src="@drawable/ic_calender"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="24dp"/>
+
+                    <TextView
+                        android:id="@+id/dateText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="6dp"
+                        android:textColor="@color/officialPink"
+                        android:layout_marginLeft="24dp"/>
+
+                </LinearLayout>
+
+                <DatePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datePickerWork"
+                    android:datePickerMode="calendar"
+                    android:spinnersShown="false"
+                    android:visibility="gone"
+                    android:padding="14dp"
+                    android:layout_marginVertical="6dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectTime"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Time"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/timeButton"
+                        android:src="@drawable/timer_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="24dp"/>
+
+                    <TextView
+                        android:id="@+id/timeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="6dp"
+                        android:textColor="@color/officialPink"
+                        android:layout_marginLeft="24dp"/>
+
+                </LinearLayout>
+
+                <TimePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timePickerWork"
+                    android:padding="14dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Total"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"/>
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint="Amount Rs/-"
+                        android:layout_marginLeft="50dp"
+                        android:textColorHint="@color/officialPink"
+                        android:background="@drawable/box_shape"
+                        android:paddingHorizontal="15dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/bookButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="62dp"
+                    android:layout_marginBottom="104dp"
+                    android:paddingHorizontal="24dp"
+                    android:background="@drawable/buttondesign"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/futter"
+                    android:layout_marginTop="24dp"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

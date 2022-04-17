@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mainwork.CongratulationActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/oldpersonimg"
+        android:scaleType="fitCenter"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/header"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="24dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="42dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/congText"
+            android:text="Congratulation !!"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="26dp"
+            android:textColor="@color/red"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/img"
+            android:layout_below="@id/congText"
+            android:src="@drawable/ic_party"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="26dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@id/text2"
+            android:text="Your Favourite Work is Booked."
+            android:layout_below="@id/img"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/red"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our Team will Respond Soon."
+            android:layout_below="@id/text2"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="36dp"
+            android:textColor="@color/officialOrange"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/futter"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"/>
+
+</RelativeLayout>

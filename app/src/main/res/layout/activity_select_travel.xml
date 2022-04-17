@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/header">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Travel"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Need Vehicle "
+                    android:layout_marginTop="7dp"
+                    android:checked="false"
+                    android:textColor="@color/officialOrange"
+                    android:textSize="24sp"
+                    app:thumbTint="@color/red"
+                    android:layout_centerHorizontal="true" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="18dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/vehicleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/bikeButton"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_bike_24" />
+
+                    <ImageView
+                        android:id="@+id/carButton"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_car_24" />
+
+                    <ImageView
+                        android:id="@+id/busButton"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_bus_24" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/pickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pick Up"
+                        android:layout_marginStart="30dp"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_below="@id/pickup"
+                        android:layout_marginTop="7dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pickupDestination"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter the pickup address"
+                            android:padding="15dp"
+                            android:background="@drawable/box_shape"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/destinationLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Destination"
+                        android:layout_marginStart="30dp"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_below="@id/destination"
+                        android:layout_marginTop="7dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/destinationTextTravel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Destination"
+                            android:padding="15dp"
+                            android:background="@drawable/box_shape"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:inputType="text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:text="Time"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/timeButton2"
+                        android:src="@drawable/timer_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="5dp"/>
+
+                    <EditText
+                        android:id="@+id/timeText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="select time"
+                        android:layout_marginLeft="15dp"
+                        android:textColorHint="@color/officialPink"
+                        android:background="@drawable/box_shape"
+                        android:paddingLeft="15dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:text="Total"
+                        android:textColor="@color/officialOrange"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"/>
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint="Amount Rs/-"
+                        android:layout_marginLeft="50dp"
+                        android:textColorHint="@color/officialPink"
+                        android:background="@drawable/box_shape"
+                        android:paddingHorizontal="15dp"/>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/descriptionTravelLyt"
+                        android:layout_width="276dp"
+                        android:layout_height="139dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_centerHorizontal="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/descriptionTravel"
+                            android:hint="Description"
+                            android:padding="5dp"
+                            android:textAlignment="textStart"
+                            android:textColorHint="@color/officialOrange"
+                            android:background="@drawable/box_shape"
+                            android:gravity="start" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/nextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/descriptionTravelLyt"
+                        android:text="Book"
+                        android:textColor="@color/white"
+                        android:textSize="24dp"
+                        android:paddingHorizontal="24dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginHorizontal="70dp"
+                        android:background="@drawable/buttondesign"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="30dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>

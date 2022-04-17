@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mainwork.authentication.NewUserInfoActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/headerLayout"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/header">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="36dp"
+            android:paddingVertical="36dp"
+            android:layout_marginTop="24dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_below="@id/headerLayout">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColorHint="@color/officialOrange">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/officialPink"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:inputType="textPersonName"
+                    android:backgroundTint="@color/officialOrange"
+                    android:background="@drawable/inputfield"
+                    android:hint="Name" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="18dp"
+                android:textColorHint="@color/officialOrange">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userEmailText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/officialRed"
+                    android:background="@drawable/inputfield"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:minLines="1"
+                    android:singleLine="true"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/email_optional" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:id="@+id/dateOfBirth"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/dobText"
+                    android:background="@drawable/inputfield"
+                    android:layout_toLeftOf="@id/calender"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="@color/officialOrange"
+                    android:layout_marginRight="8dp"
+                    android:text="Date Of Birth" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/calender"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_calender"/>
+
+            </RelativeLayout>
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePicker"
+                android:visibility="gone"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textColor="@color/officialOrange"
+                android:textSize="18sp"
+                android:layout_marginTop="24dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/genderSelector"
+                android:orientation="horizontal"
+                android:layout_marginBottom="18dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/inputfield">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioMale"
+                    android:text="@string/male"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColor="@color/officialRed"
+                    android:checked="true"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioFemale"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColor="@color/officialRed"
+                    android:text="@string/female"
+                    android:checked="false"
+                    android:textSize="16sp"/>
+
+            </RadioGroup>
+
+
+
+            <Button
+                android:id="@+id/doneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttondesign"
+                android:text="done"
+                android:paddingHorizontal="36dp"
+                android:layout_marginTop="48dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
